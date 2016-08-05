@@ -36,7 +36,6 @@ import java.util.List;
 /**
  * Created by Youngdo on 2016-08-05.
  */
-//fragment이식
 public class ChattingFragment extends Fragment {
     private static final int REQUEST_LOGIN = 0;
 
