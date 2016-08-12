@@ -15,7 +15,8 @@ import android.view.View;
 import android.widget.Button;
 
 
-//Splash - Login - Define - Main - Chatting
+//Splash - Login - Define - Main - Chatting!
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Button matching_Start;
