@@ -42,6 +42,11 @@ public class LoginActivity extends AppCompatActivity {
         ChatApplication app = (ChatApplication) getApplication();
         mSocket = app.getSocket();
         pref = getSharedPreferences("NAME", MODE_PRIVATE);
+        if(!pref.getString("name","").toString().equals("")){
+            Intent intent = new Intent(LoginActivity.this,DefineActivity.class);
+            startActivity(intent);
+            finish();
+        }
         editor = pref.edit();
         callbackManager = CallbackManager.Factory.create();
         facebook_LoginButton = (LoginButton) findViewById(R.id.login_button);
@@ -59,6 +64,9 @@ public class LoginActivity extends AppCompatActivity {
                                     editor.putString("name", object.getString("name"));
                                     editor.commit();
                                     mSocket.emit("add user", pref.getString("name", ""));
+                                    Intent intent = new Intent(LoginActivity.this,DefineActivity.class);
+                                    startActivity(intent);
+                                    finish();
                                 } catch (JSONException e) {
 
                                 }
@@ -84,11 +92,6 @@ public class LoginActivity extends AppCompatActivity {
         mSocket.on("login", onLogin);
         if(!pref.getString("name","").equals("")){
             mSocket.emit("add user", pref.getString("name", ""));
-            Intent intent = new Intent();
-            intent.putExtra("username", pref.getString("name",""));
-            intent.putExtra("numUsers", numUsers);
-            setResult(RESULT_OK, intent);
-            finish();
         }
     }
 
@@ -115,12 +118,6 @@ public class LoginActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 return;
             }
-
-            Intent intent = new Intent();
-            intent.putExtra("username", pref.getString("name",""));
-            intent.putExtra("numUsers", numUsers);
-            setResult(RESULT_OK, intent);
-            finish();
         }
     };
 

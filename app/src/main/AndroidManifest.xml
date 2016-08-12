@@ -15,9 +15,9 @@
             android:value="@string/facebook_app_id"></meta-data>
 
         <activity
-            android:name=".ChattingActivity"
+            android:name=".SplashActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,8 +31,10 @@
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-        <activity android:name=".RoominAcivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".DefineActivity"/>
+        <activity android:name=".ChattingActivity"/>
     </application>
 
 </manifest>
