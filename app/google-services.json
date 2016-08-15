@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "645107009001",
+    "firebase_url": "https://angel-in-korea.firebaseio.com",
+    "project_id": "angel-in-korea",
+    "storage_bucket": "angel-in-korea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645107009001:android:22b45f5c7c035645",
+        "android_client_info": {
+          "package_name": "com.appcenter.angel_in_korea"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645107009001-ej8gp1r5droedd44mjgkrgjut26vfcrn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlXoYpG4y1p3alhpYLpqKSc5qDx8m7EXI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
